@@ -27,8 +27,19 @@ player = Player(world.starting_room)
 
 # Fill this out with directions to walk
 # traversal_path = ['n', 'n']
+
+# Initialise vert stack
 traversal_path = []
 
+'Psuedocode'
+# Start from 0 , add 0 to visited list
+# Create list of verts adjacents
+# Add unvisited verts to top of a stack
+# Move either n, s, e or w
+# Log exit(vert) visited(put visited vert in a stack(visited list))
+# move to any adjacent unvisited vert
+# if cannot move further , backtrack and pick another unvisited vert
+# repeat until all verts visited
 
 
 # TRAVERSAL TEST
@@ -47,10 +58,10 @@ else:
     print(f"{len(room_graph) - len(visited_rooms)} unvisited rooms")
 
 
-
 #######
 # UNCOMMENT TO WALK AROUND
 #######
+'''
 player.current_room.print_room_description(player)
 while True:
     cmds = input("-> ").lower().split(" ")
@@ -60,8 +71,4 @@ while True:
         break
     else:
         print("I did not understand that command.")
-
-##########################################################
-##########################################################
-##########################################################
-
+'''
