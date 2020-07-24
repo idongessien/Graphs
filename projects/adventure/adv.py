@@ -29,18 +29,43 @@ player = Player(world.starting_room)
 # traversal_path = ['n', 'n']
 
 # Initialise vert stack
-traversal_path = []
+traversal_path = [n, n, s, w,]
+print(traversal_path)
+visited_rooms = []
+
+def add_to_map(direction, map):
+    player.travel(direction)
+    map += [player.current_room.id]
+    for e in player.current_room.get_exits():
+        if e.id == map[-2]:
+            continue
+        else:
+            addendum = add_to_map(e.id, map)
+            if(len(map + addendum) == 500):
+                return map + addendum
+
+final_map = add_to_map(player.current_room, [])
+        
+
+
 
 'Psuedocode'
-# Start from 0 , add 0 to visited list
-# Create list of verts adjacents
+# Get current room , if none , set to 0 , if 0 add to stack
+def travel_directions():
+    return player.current_room.id
+'Current room is already 0 so add 0 to stack'
+if player.current_room.id == 0:
+    visited_rooms.append(player.current_room.id)
+    print('visited: ', visited_rooms)
+    
+# Create list of verts adjacents(room exits)
 # Add unvisited verts to top of a stack
 # Move either n, s, e or w
 # Log exit(vert) visited(put visited vert in a stack(visited list))
 # move to any adjacent unvisited vert
 # if cannot move further , backtrack and pick another unvisited vert
 # repeat until all verts visited
-
+travel_directions()
 
 # TRAVERSAL TEST
 visited_rooms = set()
