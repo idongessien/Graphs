@@ -26,61 +26,76 @@ class Graph:
         """
         if v1 in self.vertices and v2 in self.vertices:
             self.vertices[v1].add(v2)
+        # Stretch
+        else:
+            raise IndexError("vert does not exist!")
 
-    def get_neighbors(self, vertex_id):
-        """
-        Get all neighbors (edges) of a vertex.
-        """
-        pass  # TODO
+graph = Graph()  # Instantiate your graph
+graph.add_vertex('0')
+graph.add_vertex('1')
+graph.add_vertex('2')
+graph.add_vertex('3')
+graph.add_edge('0', '1')
+graph.add_edge('1', '0')
+graph.add_edge('0', '3')
+graph.add_edge('3', '0')
+graph.add_edge('0', '4')
+print(graph.vertices)
 
-    def bft(self, starting_vertex):
-        """
-        Print each vertex in breadth-first order
-        beginning from starting_vertex.
-        """
-        pass  # TODO
+    # def get_neighbors(self, vertex_id):
+    #     """
+    #     Get all neighbors (edges) of a vertex.
+    #     """
+    #     pass  # TODO
 
-    def dft(self, starting_vertex):
-        """
-        Print each vertex in depth-first order
-        beginning from starting_vertex.
-        """
-        pass  # TODO
+    # def bft(self, starting_vertex):
+    #     """
+    #     Print each vertex in breadth-first order
+    #     beginning from starting_vertex.
+    #     """
+    #     pass  # TODO
 
-    def dft_recursive(self, starting_vertex):
-        """
-        Print each vertex in depth-first order
-        beginning from starting_vertex.
+    # def dft(self, starting_vertex):
+    #     """
+    #     Print each vertex in depth-first order
+    #     beginning from starting_vertex.
+    #     """
+    #     pass  # TODO
 
-        This should be done using recursion.
-        """
-        pass  # TODO
+    # def dft_recursive(self, starting_vertex):
+    #     """
+    #     Print each vertex in depth-first order
+    #     beginning from starting_vertex.
 
-    def bfs(self, starting_vertex, destination_vertex):
-        """
-        Return a list containing the shortest path from
-        starting_vertex to destination_vertex in
-        breath-first order.
-        """
-        pass  # TODO
+    #     This should be done using recursion.
+    #     """
+    #     pass  # TODO
 
-    def dfs(self, starting_vertex, destination_vertex):
-        """
-        Return a list containing a path from
-        starting_vertex to destination_vertex in
-        depth-first order.
-        """
-        pass  # TODO
+    # def bfs(self, starting_vertex, destination_vertex):
+    #     """
+    #     Return a list containing the shortest path from
+    #     starting_vertex to destination_vertex in
+    #     breath-first order.
+    #     """
+    #     pass  # TODO
 
-    def dfs_recursive(self, starting_vertex, destination_vertex):
-        """
-        Return a list containing a path from
-        starting_vertex to destination_vertex in
-        depth-first order.
+    # def dfs(self, starting_vertex, destination_vertex):
+    #     """
+    #     Return a list containing a path from
+    #     starting_vertex to destination_vertex in
+    #     depth-first order.
+    #     """
+    #     pass  # TODO
 
-        This should be done using recursion.
-        """
-        pass  # TODO
+    # def dfs_recursive(self, starting_vertex, destination_vertex):
+    #     """
+    #     Return a list containing a path from
+    #     starting_vertex to destination_vertex in
+    #     depth-first order.
+
+    #     This should be done using recursion.
+    #     """
+    #     pass  # TODO
 
 if __name__ == '__main__':
     graph = Graph()  # Instantiate your graph
